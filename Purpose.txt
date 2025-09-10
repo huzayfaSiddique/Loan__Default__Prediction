@@ -1,0 +1,9 @@
+The main purpose of building this project was to highlight that model building is not just about calling fit() and predict(). That’s only the surface of machine learning. To actually build a strong and reliable model, you need to carefully consider multiple steps such as data quality assessment, feature engineering, feature selection, model selection, and hyperparameter tuning. I will try to explain each of these aspects in detail so that the end-to-end thought process becomes clear.
+
+Quality of Data
+
+The first and most important step before building any model is to assess the quality of data. While performing exploratory data analysis (EDA), I noticed that the dataset I chose was not able to clearly distinguish between predictors and non-predictors. Sometimes the dataset can be dummy data, or the data collected may contain such mixed signals that it cannot be used effectively to build a model.
+
+In my case, even after trying different approaches, the model only achieved around 74–75% accuracy on the test set, while the training accuracy reached 92–93%. At first glance this looks like overfitting, and in a sense it is, but the deeper issue was that for most features, the peaks for both “Yes” and “No” classes were at nearly the same place. This indicates that the dataset itself does not provide strong separability between classes.
+
+This example emphasizes a key principle: if the data is not rich or consistent enough to capture meaningful patterns, you cannot achieve good test accuracy — no matter how much hyperparameter tuning you do, which algorithm you choose, or how advanced your feature engineering and feature selection are. The foundation of every good model is high-quality data and its inherent capacity to reveal patterns. Without that, model performance will always be limited.
